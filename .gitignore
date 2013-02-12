@@ -1,0 +1,9 @@
+build
+ipch
+*.pem
+*.sln
+*.sdf
+*.suo
+*.user
+*.vcxproj
+*.filters
