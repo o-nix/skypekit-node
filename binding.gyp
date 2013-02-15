@@ -2,7 +2,7 @@
 	"targets": [
 		{
 			"target_name": "skypekit",
-			"sources": [ "skypekit.cc", "Skype.cc" ],
+                        "sources": [ "skypekit.cc", "Skype.cc", "Account.cc", "Conversation.cc", "Base.cc" ],
 
 			"include_dirs": [
 				"openssl/include",

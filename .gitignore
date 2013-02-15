@@ -7,3 +7,4 @@ ipch
 *.user
 *.vcxproj
 *.filters
+*.pro
