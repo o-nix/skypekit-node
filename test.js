@@ -1,6 +1,9 @@
 var fs = require('fs');
+var util = require('util');
+var events = require('events');
 
 var skypekit = require('./build/Debug/skypekit');
+util.inherits(skypekit.Skype, events.EventEmitter);
 
 var skype = new skypekit.Skype();
 
@@ -11,6 +14,12 @@ skype.setKey(fs.readFileSync('skypekit.pem'));
 skype.setLogin(login);
 skype.setPassword(password);
 
+skype.on('login', function() {
+	console.log('Yay! We are logged in now!')
+})
+
 skype.login();
 
-setInterval(function() {}, 100)
+setInterval(function() {
+	skype.toString();
+}, 10000)
