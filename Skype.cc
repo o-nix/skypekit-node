@@ -120,9 +120,6 @@ void o_nix::Skype::OnLoggedIn_(uv_async_t *handle, int status) {
 
 	node::MakeCallback(skype->handle_, EMIT_NAME, 1, argv);
 
-	v8::Local<v8::Function> emitHandler = v8::Local<v8::Function>::Cast(skype->handle_->Get(EMIT_NAME));
-	emitHandler->Call(skype->handle_, 1, argv);
-
 	uv_close((uv_handle_t*) handle, NULL);
 	delete data, handle;
 }
